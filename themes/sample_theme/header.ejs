@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="<%= settings.meta.charset %>">
+  <title><% if (is_page === 'single') { %><%= entries.title + ' | ' %><% } %><%= settings.meta.title %></title>
+  <meta name="description" content="<% if (is_page === 'single') { %><%= entries.content %><% } else { %><%= settings.meta.description %><% } %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>

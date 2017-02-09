@@ -1,0 +1,16 @@
+{
+  "name": "ejspress",
+  "version": "1.0.0",
+  "description": "simple page generator",
+  "main": "app.js",
+  "repository": "https://github.com/kokushin/ejspress.git",
+  "author": "kokushing",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-ejs": "^3.0.0"
+  }
+}

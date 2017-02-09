@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Sample Website",
+    "description": "This is sample website.",
+    "url": "http://example.com/",
+    "charset": "UTF-8"
+  },
+  "profile": {
+    "theme": "sample_theme",
+    "author": "kokushin",
+    "sns": {
+      "twitter": "kokushing"
+    }
+  },
+  "path": {
+    "entries": "entry",
+    "publish": "publish"
+  }
+}
