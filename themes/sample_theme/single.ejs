@@ -4,8 +4,10 @@
   entries: entries
 }) %>
 
-<h2><%- entries.title %></h2>
+<h2><%= entries.title %></h2>
 
-<p><%- entries.content %></p>
+<time><%= entries.date %></time>
+
+<p><%= entries.content %></p>
 
 <%- include('./footer') %>

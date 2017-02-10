@@ -1,20 +1,26 @@
 {
+  "theme": "sample_theme",
   "meta": {
     "title": "Sample Website",
     "description": "This is sample website.",
-    "url": "http://example.com/",
+    "url": "http://localhost/",
     "lang": "ja",
-    "charset": "UTF-8"
+    "charset": "UTF-8",
+    "author": "yourname"
   },
-  "profile": {
-    "theme": "sample_theme",
-    "author": "kokushin",
-    "sns": {
-      "twitter": "kokushing"
-    }
+  "entries": {
+    "max": 5
   },
   "path": {
-    "entries": "entry",
-    "publish": "publish"
+    "entries": "entry/",
+    "release": "release/"
+  },
+  "utility": {
+    "minify": false,
+    "zip": false
+  },
+  "ejspress": {
+    "version": "1.0.0",
+    "update": "20170211"
   }
 }

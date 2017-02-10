@@ -9,6 +9,8 @@
 const
   gulp = require('gulp'),
   fs = require('fs'),
+  del = require('del'),
+  runSequence = require('run-sequence'),
   rename = require('gulp-rename'),
   ejs = require('gulp-ejs');
 
@@ -30,14 +32,22 @@ const
   data = {
     settings: src.settings,
     entries: src.entries,
-    theme: src.settings.profile.theme
+    theme: src.settings.theme
   };
 
 
 /**
- * `gulp publish` コマンドで書き出し
+ * `gulp` コマンドで書き出し
  */
-gulp.task('publish', ['copyAssets', 'compileIndex', 'compileSingle']);
+gulp.task('default', ['clean'], () => {
+  runSequence('copyAssets', ['compileIndex', 'compileSingle']);
+});
+
+
+/**
+ * 不要ファイルを削除
+ */
+gulp.task('clean', del.bind(null, ['release']));
 
 
 /**
@@ -51,7 +61,7 @@ gulp.task('copyAssets', () => {
     ],
     {base: 'themes/' + data.theme}
   )
-  .pipe(gulp.dest(data.settings.path.publish));
+  .pipe(gulp.dest(data.settings.path.release));
 });
 
 
@@ -65,7 +75,7 @@ gulp.task('compileIndex', () => {
       entries: data.entries
     }))
     .pipe(rename('index.html'))
-    .pipe(gulp.dest(data.settings.path.publish));
+    .pipe(gulp.dest(data.settings.path.release));
 });
 
 
@@ -73,13 +83,13 @@ gulp.task('compileIndex', () => {
  * 個別ページを生成
  */
 gulp.task('compileSingle', () => {
-  for (let i = 0; i < data.entries.entry.length; i++) {
+  for (let i = 0; i < data.entries.data.length; i++) {
     gulp.src('themes/' + data.theme +'/single.ejs')
       .pipe(ejs({
         settings: data.settings,
-        entries: data.entries.entry[i]
+        entries: data.entries.data[i]
       }))
-      .pipe(rename(data.entries.entry[i].id + '.html'))
-      .pipe(gulp.dest(data.settings.path.publish + '/' + data.settings.path.entries + '/'));
+      .pipe(rename(data.entries.data[i].id + '.html'))
+      .pipe(gulp.dest(data.settings.path.release + data.settings.path.entries));
   }
 });
