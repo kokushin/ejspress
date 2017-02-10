@@ -37,13 +37,28 @@ const
 /**
  * `gulp publish` コマンドで書き出し
  */
-gulp.task('publish', ['compile_index', 'compile_single']);
+gulp.task('publish', ['copyAssets', 'compileIndex', 'compileSingle']);
+
+
+/**
+ * アセットをコピー
+ */
+gulp.task('copyAssets', () => {
+  return gulp.src(
+    [
+      'themes/' + data.theme +'/**/*',
+      '!themes/' + data.theme +'/**/*.ejs'
+    ],
+    {base: 'themes/' + data.theme}
+  )
+  .pipe(gulp.dest(data.settings.path.publish));
+});
 
 
 /**
  * トップページを生成
  */
-gulp.task('compile_index', () => {
+gulp.task('compileIndex', () => {
   gulp.src('themes/' + data.theme +'/index.ejs')
     .pipe(ejs({
       settings: data.settings,
@@ -57,7 +72,7 @@ gulp.task('compile_index', () => {
 /**
  * 個別ページを生成
  */
-gulp.task('compile_single', () => {
+gulp.task('compileSingle', () => {
   for (let i = 0; i < data.entries.entry.length; i++) {
     gulp.src('themes/' + data.theme +'/single.ejs')
       .pipe(ejs({

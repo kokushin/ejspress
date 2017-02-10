@@ -3,6 +3,7 @@
     "title": "Sample Website",
     "description": "This is sample website.",
     "url": "http://example.com/",
+    "lang": "ja",
     "charset": "UTF-8"
   },
   "profile": {
