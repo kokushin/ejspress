@@ -11,7 +11,7 @@
       <article>
         <h2><%= entry.title %></h2>
         <time><%= entry.date %></time>
-        <p><%= (entry.content).slice(0, 40) + ' ...' %></p>
+        <p><%= entry.summary %></p>
         <a href="<%= settings.path.entries + entry.id + '.html' %>">Read more</a>
       </article>
     <% }) %>

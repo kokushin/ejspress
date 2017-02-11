@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>EJSPress JSON Editor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="title">
+    <input type="text" id="title-input" placeholder="記事のタイトル" value="この記事はダミーです。テスト用の記事を投稿しました"></input>
+  </div>
+  <div id="filename">
+    <input type="text" id="filename-input" placeholder="生成するファイルの名前" value="test-entry-xxxx"></input>
+  </div>
+  <div id="tags">
+    <input type="text" id="tags-input" placeholder="タグ（半角スペースで区切る）" value="tag1 tag2 tag3"></input>
+  </div>
+  <div id="content">
+    <textarea :value="input" @input="update" placeholder="ここに記事の本文を入力（マークダウン形式）"></textarea>
+    <div id="content-output" v-html="compiledMarkdown"></div>
+  </div>
+  <div id="export">
+    <button v-on:click="getTextSrc">JSON形式で出力</button>
+  </div>
+  <div id="modal">
+    <div class="modal-wrap">
+      <p>以下のJSONコードを /entries/entries.json に追記してください。</p>
+      <div id="result"><pre><code></code></pre></div>
+      <div id="copy">
+        <button data-clipboard-target="#result">クリップボードにコピー</button>
+      </div>
+      <div id="close">
+        <button v-on:click="closeModal">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/clipboard.min.js"></script>
+  <script src="js/lodash.js"></script>
+  <script src="js/vue.min.js"></script>
+  <script src="js/marked.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

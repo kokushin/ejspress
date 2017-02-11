@@ -9,7 +9,7 @@
     "author": "yourname"
   },
   "entries": {
-    "max": 5
+    "maxDisplay": 5
   },
   "path": {
     "entries": "entry/",
