@@ -47,7 +47,7 @@ gulp.task('default', ['clean'], () => {
 /**
  * 不要ファイルを削除
  */
-gulp.task('clean', del.bind(null, ['release']));
+gulp.task('clean', del.bind(null, ['publish']));
 
 
 /**
@@ -61,7 +61,7 @@ gulp.task('copyAssets', () => {
     ],
     {base: 'themes/' + data.theme}
   )
-  .pipe(gulp.dest(data.settings.path.release));
+  .pipe(gulp.dest(data.settings.path.publish));
 });
 
 
@@ -75,7 +75,7 @@ gulp.task('compileIndex', () => {
       entries: data.entries
     }))
     .pipe(rename('index.html'))
-    .pipe(gulp.dest(data.settings.path.release));
+    .pipe(gulp.dest(data.settings.path.publish));
 });
 
 
@@ -90,6 +90,6 @@ gulp.task('compileSingle', () => {
         entries: data.entries.data[i]
       }))
       .pipe(rename(data.entries.data[i].id + '.html'))
-      .pipe(gulp.dest(data.settings.path.release + data.settings.path.entries));
+      .pipe(gulp.dest(data.settings.path.publish + data.settings.path.entries));
   }
 });

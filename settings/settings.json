@@ -13,7 +13,7 @@
   },
   "path": {
     "entries": "entry/",
-    "release": "release/"
+    "publish": "publish/"
   },
   "utility": {
     "minify": false,
