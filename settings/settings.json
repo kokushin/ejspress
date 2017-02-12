@@ -1,5 +1,5 @@
 {
-  "theme": "sample_theme",
+  "theme": "mdl",
   "meta": {
     "title": "Sample Website",
     "description": "This is sample website.",
@@ -12,7 +12,7 @@
     "maxDisplay": 5
   },
   "path": {
-    "entries": "entry/",
+    "entries": "./",
     "publish": "publish/"
   },
   "utility": {

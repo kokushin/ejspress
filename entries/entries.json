@@ -2,27 +2,11 @@
   "data": [
     {
       "id": "test-entry-xxxx",
-      "date": "2017/2/11",
+      "date": "2017/2/12",
       "tags": "tag1 tag2 tag3",
       "title": "この記事はダミーです。テスト用の記事を投稿しました",
       "content": "<h3>テスト記事です。</h3><p>みなさんこんにちは。<br>いかがお過ごしでしょうか。</p>\n<p>これはテスト記事なので注意してください。<br>特に意味はありません。</p>\n<p>リンクのテストを行います。</p>\n<p><a href=\"https://github.com/vuejs/vue\">link</a></p>\n<p>画像のテストを行います。</p>\n<p><img src=\"https://pbs.twimg.com/profile_images/769019872198139904/6NdduSfA.jpg\" alt=\"kokushin\"></p>\n<p>素晴らしい！</p>\n",
       "summary": "テスト記事です。みなさんこんにちは。いかがお過ごしでしょうか。これはテスト記事なので注意してください ..."
-    },
-    {
-      "id": "test-post-2",
-      "date": "2017/2/11",
-      "tags": "test2",
-      "title": "テスト記事を投稿します 2",
-      "content": "<h3>テスト記事です。</h3><p>これはテスト記事なので注意してください。<br>特に意味はありません。</p>\n<p>リンクのテストを行います。<br><a href=\"https://github.com/vuejs/vue\">link</a></p>\n<p><img src=\"https://pbs.twimg.com/profile_images/769019872198139904/6NdduSfA.jpg\" alt=\"kokushin\"></p>\n<p>素晴らしい！</p>\n",
-      "summary": "テスト記事です。これはテスト記事なので注意してください。特に意味はありません。リンクのテストを行いま"
-    },
-    {
-      "id": "test-entry",
-      "date": "2017/2/11",
-      "tags": "test editor",
-      "title": "テスト記事を投稿しました",
-      "summary": "empty",
-      "content": "<h2>概要</h2><p>この記事は EJSPress JSON Editor にて生成されています。</p>\n<p>改行もちゃんとできます。<br>マークダウン記法なので、スラスラと書くことが可能です。</p>\n<p>コードも埋め込むことが可能です。</p>\n<pre><code>var clipboard = new Clipboard('#copy button');\n      clipboard.on('success', function(e) {\n          alert('クリップボードにコピーしました。');\n      });\n</code></pre><p>いかがでしょうか？</p>\n<h3>小見出しです。</h3><p>以上で記事を終わります。<br>ありがとうございました！</p>\n"
     }
   ]
 }
