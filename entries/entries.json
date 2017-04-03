@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "id": "test-entry-xxxx",
+      "date": "2017/2/12",
+      "tags": "tag1 tag2 tag3",
+      "title": "この記事はダミーです。テスト用の記事を投稿しました",
+      "content": "<h3>テスト記事です。</h3><p>みなさんこんにちは。<br>いかがお過ごしでしょうか。</p>\n<p>これはテスト記事なので注意してください。<br>特に意味はありません。</p>\n<p>リンクのテストを行います。</p>\n<p><a href=\"https://github.com/vuejs/vue\">link</a></p>\n<p>画像のテストを行います。</p>\n<p><img src=\"https://pbs.twimg.com/profile_images/769019872198139904/6NdduSfA.jpg\" alt=\"kokushin\"></p>\n<p>素晴らしい！</p>\n",
+      "summary": "テスト記事です。みなさんこんにちは。いかがお過ごしでしょうか。これはテスト記事なので注意してください ..."
+    }
+  ]
+}

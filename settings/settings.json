@@ -1,0 +1,26 @@
+{
+  "theme": "mdl",
+  "meta": {
+    "title": "Sample Website",
+    "description": "This is sample website.",
+    "url": "http://localhost/",
+    "lang": "ja",
+    "charset": "UTF-8",
+    "author": "yourname"
+  },
+  "entries": {
+    "maxDisplay": 5
+  },
+  "path": {
+    "entries": "./",
+    "publish": "publish/"
+  },
+  "utility": {
+    "minify": false,
+    "zip": false
+  },
+  "ejspress": {
+    "version": "1.0.0",
+    "update": "20170211"
+  }
+}

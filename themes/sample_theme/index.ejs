@@ -1,0 +1,24 @@
+<%- include('./header', {
+  is_page: 'index',
+  settings: settings,
+  entries: entries
+}) %>
+
+<main>
+
+  <% if (entries.data.length > 0) { %>
+    <% entries.data.forEach(function(entry) { %>
+      <article>
+        <h2><%= entry.title %></h2>
+        <time><%= entry.date %></time>
+        <p><%= entry.summary %></p>
+        <a href="<%= settings.path.entries + entry.id + '.html' %>">Read more</a>
+      </article>
+    <% }) %>
+  <% } else { %>
+    <p>Entries is not found.</p>
+  <% } %>
+
+</main>
+
+<%- include('./footer') %>

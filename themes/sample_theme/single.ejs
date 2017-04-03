@@ -1,0 +1,15 @@
+<%- include('./header', {
+  is_page: 'single',
+  settings: settings,
+  entries: entries
+}) %>
+
+<h2><%= entries.title %></h2>
+
+<time><%= entries.date %></time>
+
+<div class="content">
+  <%- entries.content %>
+</div>
+
+<%- include('./footer') %>
