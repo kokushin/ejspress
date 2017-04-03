@@ -6,6 +6,9 @@
   "repository": "https://github.com/kokushin/ejspress.git",
   "author": "kokushing",
   "license": "MIT",
+  "scripts": {
+    "editor": "node ./editor/node_editor.js"
+  },
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
